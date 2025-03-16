@@ -268,6 +268,7 @@ def main():
                                 range=[0, 10],  # Ajuste conforme sua escala de notas
                                 tickvals=[0, 2, 4, 6, 8, 10],
                                 ticktext=["0", "2", "4", "6", "8", "10"]
+                                tickfont=dict(color="black"),
                             ),
                             angularaxis=dict(
                                 rotation=90,  # Começar no topo
