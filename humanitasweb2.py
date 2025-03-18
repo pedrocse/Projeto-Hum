@@ -485,7 +485,7 @@ def main():
             fig_ranking.update_layout(
                 title=f"Ranking de Estudantes por Média Geral - {bimestre}",
                 xaxis_title="Estudantes",
-                yaxis_title="Média Geral",
+                yaxis_title="Final score",
                 height=600
             )
             st.plotly_chart(fig_ranking)
