@@ -533,7 +533,7 @@ def main():
         elif opcao == "Ranking por Disciplina":
             st.title(f"Ranking por Disciplina - {bimestre}")
             # Checkbox para disciplina específica
-            disciplinas = df.drop(columns=["Numero", "Nome").columns
+            disciplinas = df.drop(columns=["Numero", "Nome"]).columns
             disciplina_selecionada = st.sidebar.selectbox("Selecione a disciplina",disciplinas)
             #st.header(f"Ranking por Disciplina - {bimestre}")4
             st.write(f"Esta aba permite selecionar uma disciplina e visualizar as notas de todos os estudantes para o {bimestre}.")
