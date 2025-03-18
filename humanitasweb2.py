@@ -313,8 +313,8 @@ def main():
 
             # Gráfico Hexagonal (Radar Chart)
 
-            disciplinas_filtradas = [disc for disc in disciplinas if disc not in ["Numero", "Final score"]]
-            medias = [med for disc, med in zip(disciplinas, medias) if disc not in ["Numero", "Final score"]]
+            disciplinas_filtradas = [disc for disc in disciplinas if disc not in ["Numero", "Final score","Media_Geral"]]
+            medias = [med for disc, med in zip(disciplinas, medias) if disc not in ["Numero", "Final score"],"Media_Geral"]
             st.subheader(f"Visão Geral das Médias da Turma - {bimestre}")
             fig_radar = go.Figure()
             fig_radar.add_trace(go.Scatterpolar(
