@@ -468,7 +468,7 @@ def main():
             #df["Media_Geral"] = df.drop(columns=["Numero", "Nome"]).mean(axis=1) //calcula a média inclusive da coluna Final score
             #df["Media_Geral"] = df.drop(columns=["Numero", "Nome", "Final score"]).mean(axis=1)//calcula a média removendo a coluna Final score
             df["Media_Geral"] = df["Final score"]
-            ranking = df[["Numero", "Nome", "Media_Geral"]].sort_values(by="Media_Geral", ascending=False)
+            ranking = df[["Numero", "Nome"]].sort_values(by="Media_Geral", ascending=False)
 
             # Exibir o ranking
             st.subheader(f"Ranking de Estudantes por Média Geral - {bimestre}")
