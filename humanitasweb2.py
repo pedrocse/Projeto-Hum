@@ -468,7 +468,7 @@ def main():
             #df["Media_Geral"] = df.drop(columns=["Numero", "Nome"]).mean(axis=1) //calcula a média inclusive da coluna Final score
             #df["Media_Geral"] = df.drop(columns=["Numero", "Nome", "Final score"]).mean(axis=1)//calcula a média removendo a coluna Final score
             df["Media_Geral"] = df["Final score"]
-            ranking = df[["Numero", "Nome","Final score"]].sort_values(by="Final score", ascending=False)
+            ranking = df[["Numero", "Nome","Final score"]].sort_values(by="Final score", ascending=False)# troquei Final score por Media_Geral
 
             # Exibir o ranking
             st.subheader(f"Ranking de Estudantes por Média Geral - {bimestre}")
@@ -479,13 +479,13 @@ def main():
             fig_ranking = go.Figure()
             fig_ranking.add_trace(go.Bar(
                 x=ranking["Nome"],
-                y=ranking["Final score"],
+                y=ranking["Final score"],# troquei Final score por Media_Gera
                 marker_color="green"
             ))
             fig_ranking.update_layout(
                 title=f"Ranking de Estudantes por Média Geral - {bimestre}",
                 xaxis_title="Estudantes",
-                yaxis_title="Final score",
+                yaxis_title="Final score",# troquei Final score por Media_Gera
                 height=600
             )
             st.plotly_chart(fig_ranking)
