@@ -479,7 +479,7 @@ def main():
             fig_ranking = go.Figure()
             fig_ranking.add_trace(go.Bar(
                 x=ranking["Nome"],
-                y=ranking["Final score"],# troquei Final score por Media_Gera
+                y=ranking["Media_Geral"],# troquei Final score por Media_Gera
                 marker_color="green"
             ))
             fig_ranking.update_layout(
