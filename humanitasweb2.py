@@ -564,8 +564,7 @@ def main():
             # Gráfico de distribuição normal para a disciplina selecionada
             st.subheader(f"Distribuição Normal das Notas em {disciplina_selecionada} - {bimestre}")
             #mean_disciplina = notas_disciplina[disciplina_selecionada].mean()  # Média das notas da disciplina
-            mean_disciplina = filtered_df['Final score'].mean()
-            #mean_disciplina = 6
+            mean_disciplina = 5.82
             #std_dev_disciplina = 1
             std_dev_disciplina = notas_disciplina[disciplina_selecionada].std()  # Desvio padrão das notas da disciplina
             x_disciplina = np.linspace(mean_disciplina - 4 * std_dev_disciplina, mean_disciplina + 4 * std_dev_disciplina, 100)
